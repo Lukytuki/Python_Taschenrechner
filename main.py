@@ -1,6 +1,12 @@
 def addieren(a, b):
     return a + b
 
+def subtrahieren(a, b):
+    return a - b
+
+def multiplizieren(a, b):
+    return a * b
+
 def main():
     print("Taschenrechner")
     print("1 fuer Addition")
@@ -15,8 +21,10 @@ def main():
             print("Resultat: {}".format(addieren(2,3)))
             # Hier Funktion für Addition einfügen
         case "2":
+            print("Resultat: {}".format(subtrahieren(2, 3)))
             # Hier Funktion für die Subtraktion einfügen
         case "3":
+            print("Resultat: {}".format(multiplizieren(2, 3)))
             # Hier die Funktion für die Multiplikation einfügen
         case "4":
             # Hier die Funktion für die Division einfügen
