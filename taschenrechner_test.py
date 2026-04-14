@@ -1,5 +1,5 @@
 import unittest
-from main import addieren, subtraktion
+from main import addieren, subtrahieren, multiplizieren, divison
 
 class test_taschenrechner(unittest.TestCase):
     def test_addition(self):
@@ -8,10 +8,20 @@ class test_taschenrechner(unittest.TestCase):
         self.assertEqual(addieren(0, 0), 0)
 
     def test_subtraktion(self):
-        self.assertEqual(subtraktion(3, 3), 0)
-        self.assertEqual(subtraktion(-1, 1), -2)
-        self.assertEqual(subtraktion(0, 0), 0)
+        self.assertEqual(subtrahieren(3, 3), 0)
+        self.assertEqual(subtrahieren(-1, 1), -2)
+        self.assertEqual(subtrahieren(0, 0), 0)
 
+    def test_multiplizieren(self):
+        self.assertEqual(multiplizieren(3, 3), 9)
+        self.assertEqual(multiplizieren(-1, 1), -1)
+        self.assertEqual(multiplizieren(0, 0), 0)
+
+    def test_divison(self):
+        self.assertEqual(divison(1, 3), 1/3)
+        self.assertEqual(divison(-1, 1), -1)
+        self.assertEqual(divison(25, 5), 5)
+        self.assertEqual(divison(2, 0), 0)
 
 if __name__ == '__main__':
     unittest.main()
